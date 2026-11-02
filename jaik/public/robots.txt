@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /admin
+Disallow: /wp-includes/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /my-account/
+
+# Sitemap
+Sitemap: 

@@ -1,0 +1,8 @@
+# Default rules for all LLMs
+User-LLM: *
+Allow: /blog/
+Allow: /pages/
+# Optional: specify sitemap for better content understanding
+  
+# Contact information for inquiries about data usage
+Contact: 

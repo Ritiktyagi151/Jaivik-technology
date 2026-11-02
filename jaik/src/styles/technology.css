@@ -1,0 +1,217 @@
+:root {
+  --colorRed: #ff0000;
+  --colorBlack: #000000;
+}
+
+.bhakar-technologia-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: visible;
+  box-shadow: 0 5px 15px rgba(90, 89, 89, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.bhakar-technologia-card:hover {
+  transform: scale(1.25);
+  box-shadow: 0 10px 20px rgba(196, 192, 192, 0.7);
+  z-index: 100000;
+}
+
+.bhakar-technologia-img {
+  position: relative;
+  overflow: hidden;
+  height: 169px;
+}
+
+.bhakar-technologia-img .image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+}
+
+.bhakar-technologia-img .hover-image {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+.bhakar-technologia-img:hover .main-image {
+  display: none;
+}
+
+.bhakar-technologia-img:hover .hover-image {
+  display: block;
+}
+
+@media (max-width: 999px) {
+  .bhakar-technologia-img {
+    height: 135px;
+  }
+}
+@media (max-width: 768px) {
+  .bhakar-technologia-img {
+    height: 150px;
+  }
+}
+@media (max-width: 680px) {
+  .bhakar-technologia-img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bhakar-technologia-img {
+    height: 151px;
+  }
+}
+
+.bhakar-technologia-section {
+  padding: 50px 15px;
+  background: #141414;
+  position: relative;
+}
+
+.bhakar-technologia-heading h2 {
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+}
+
+.bhakar-technologia-heading h2 a {
+  text-decoration: none;
+  color: white;
+}
+
+.bhakar-technologia-heading h2 a span {
+  font-size: 16px;
+  color: var(--colorRed);
+}
+
+.bhakar-technologia-nav {
+  opacity: 0;
+  transition: all 0.2s ease;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10px;
+  z-index: 10;
+}
+
+.bhakar-technologia-slider:hover .bhakar-technologia-nav {
+  opacity: 1;
+}
+
+.bhakar-technologia-button-prev,
+.bhakar-technologia-button-next {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid var(--colorRed);
+  background-color: var(--colorBlack);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bhakar-technologia-button-prev:hover::after {
+  transform: translateX(-5px);
+}
+
+.bhakar-technologia-button-next:hover::after {
+  transform: translateX(5px);
+}
+
+.bhakar-technologia-button-prev::after,
+.bhakar-technologia-button-next::after {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: var(--colorRed);
+  transition: all 0.3s linear;
+}
+
+.bhakar-technologia-button-prev::after {
+  content: "<";
+}
+
+.bhakar-technologia-button-next::after {
+  content: ">";
+}
+
+.bhakar-technologia-pagination {
+  position: relative;
+  margin-top: 20px;
+}
+
+.bhakar-technologia-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  opacity: 1;
+}
+
+.bhakar-technologia-pagination .swiper-pagination-bullet-active {
+  background: #333;
+}
+
+.bhakar-technologia-slider {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  display: block;
+  visibility: visible !important;
+}
+
+@media (max-width: 768px) {
+  .bhakar-technologia-heading h2 {
+    font-size: 24px;
+  }
+  .bhakar-technologia-heading h2 a span {
+    font-size: 14px;
+  }
+  .bhakar-technologia-nav {
+    padding: 0 5px;
+  }
+  .bhakar-technologia-button-next,
+  .bhakar-technologia-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+  .bhakar-technologia-button-next::after,
+  .bhakar-technologia-button-prev::after {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bhakar-technologia-heading h2 {
+    font-size: 20px;
+  }
+  .bhakar-technologia-button-next,
+  .bhakar-technologia-button-prev {
+    width: 25px;
+    height: 25px;
+  }
+  .bhakar-technologia-button-next::after,
+  .bhakar-technologia-button-prev::after {
+    font-size: 12px;
+  }
+}
