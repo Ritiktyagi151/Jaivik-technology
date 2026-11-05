@@ -309,9 +309,9 @@ const Footer = () => {
       {/* Copyright */}
       <div className="relative z-10 mt-4 border-t border-white/5 py-4 text-center">
         <p className="text-main-gray text-[15px]">
-          {data.copyright || "© 2016 All Rights Reserved"}
+          {(data.copyright || "© 2016 All Rights Reserved").replace(/jaikvik/gi, "Jaivik")}
           <Link href="/" className="text-main-red hover:underline ml-1">
-            Jaivik Technology
+            Jaivik Technology India Pvt. Ltd.
           </Link>
         </p>
       </div>
