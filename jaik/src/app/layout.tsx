@@ -16,7 +16,7 @@ const mulish = Mulish({
 export const metadata: Metadata = {
   ...pageMetadata("/"),
   verification: {
-    google: "X2yD33PfPoVCpTrJj89X2NimQXPRWR76wfD1Z28kUQA",
+    google: "8O7dFfCIBH5vdVtu7DfCEsd-BcqEfadcf8iqPHVnab8",
   },
   icons: {
     icon: [
