@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 
 const DESKTOP_VIDEO =
-  "/videos/newdemo.mp4";
+  "/videos/jaivik-destop.mp4";
 const MOBILE_VIDEO =
-  "/videos/newdemo.mp4";
+  "/videos/jaivik-mobile.mp4";
 const POSTER_IMAGE =
-  "/assets/optimized/handshake.png";
+  "/jaivik-thumnail.webp";
 
 const shouldSkipAutoplay = () => {
   const nav = navigator as Navigator & {
@@ -30,22 +30,9 @@ const HeroVideo = () => {
 
   useEffect(() => {
     if (shouldSkipAutoplay()) return;
-    if (window.matchMedia("(max-width: 767px)").matches) return;
-
-    const start = () => setCanLoadVideo(true);
-    const options: AddEventListenerOptions = { once: true, passive: true };
-
-    window.addEventListener("pointermove", start, options);
-    window.addEventListener("pointerdown", start, options);
-    window.addEventListener("keydown", start, options);
-    window.addEventListener("scroll", start, options);
-
-    return () => {
-      window.removeEventListener("pointermove", start);
-      window.removeEventListener("pointerdown", start);
-      window.removeEventListener("keydown", start);
-      window.removeEventListener("scroll", start);
-    };
+    // Start fetching as soon as the hero mounts. Waiting for a pointer event
+    // made desktop playback feel delayed and prevented mobile autoplay entirely.
+    setCanLoadVideo(true);
   }, []);
 
   return (
@@ -56,7 +43,7 @@ const HeroVideo = () => {
           alt="Jaivik Technology"
           width={867}
           height={522}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-fill"
           decoding="async"
           fetchPriority="high"
         />
@@ -77,7 +64,7 @@ const HeroVideo = () => {
           muted
           playsInline
           loop
-          preload="none"
+          preload="auto"
           poster={POSTER_IMAGE}
           className="absolute inset-0 h-full w-full cursor-pointer object-cover transition-transform duration-300 group-hover:scale-[1.01]"
         >
